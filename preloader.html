@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="website-content">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+
+        .container{
+            width: 100%;
+            height: 100%;
+        }
+
+        .map{
+            position: fixed;
+            width: 20%;
+            margin: 50px 0;
+            padding: 0 20px;
+            display: flex;
+            flex-direction:column;
+        }
+
+        .sections{
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            left: 20%;
+            padding: 30px 20px 0 0;
+        }
+
+        .map > div {
+            height: 100px; /* Set the initial height to 100px */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1.5px solid #000;
+            border-radius: 20px;
+            transition: height 0.5s;
+        }
+
+        .sections > div{
+            width: 100%;
+            margin: 20px 0 80px 0;
+        }
+
+        .header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 10px 25px;
+            border: 1.5px solid #000;
+            border-radius: 40px;
+            font-size: 14px;
+        }
+
+        .map > div p:nth-child(1){
+            font-size: 13px;
+        }
+
+        .map > div p:nth-child(2){
+            font-size: 20px;
+        }
+
+        .copy{
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            border: 1.5px solid #000;
+            border-radius: 20px;
+        }
+
+        .copy h1{
+            font-weight: 300;
+            font-size: 60px;
+        }
+
+        .section-1
+        {
+            height: 500px;
+        }
+
+        .section-2
+        {
+            height: 800px;
+        }
+
+        .section-3
+        {
+            height: 600px;
+        }
+
+        .section-4
+        {
+            height: 500px;
+        }
+
+        .section-5
+        {
+            height: 800px;
+        }
+
+        .whitespace{
+            width: 100%;
+            height: 10px;
+            border: none !important;
+        }
+
+        .s-1, .section-1 .header, .section-1 .copy{
+            background: greenyellow;
+        }
+
+        
+    </style>
+    <style>
+        /* Add a media query for screens with a width less than 768px (adjust as needed) */
+        @media (max-width: 768px) {
+           .copy h1{
+            font-size: 20px;
+           }
+
+           .header{
+            font-size: 10px;
+        }
+
+        .map > div p:nth-child(1){
+            font-size: 16px;
+        }
+
+        .map > div p:nth-child(2){
+            font-size: 16px;
+        }
+    
+        .map{
+            position: fixed;
+            bottom: 0;
+            width: 0%;
+            margin: 0 0;
+            padding: 0 20px;
+            display: flex;
+            flex-direction:row;
+            z-index: 2;
+        }
+
+        .sections{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0%;
+            padding: 20px 20px 20px 20px;
+        }
+        .map > div {
+            width: 100px; /* Set the initial height to 100px */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1.5px solid #000;
+            border-radius: 20px;
+            transition: width 0.5s;
+        }
+
+        
+        }
+
+
+    </style>
+    
+    <div class="container">
+        <div class="map">
+            <div class="s-1">
+                <p>01</p>
+                <p>Riyansh Jain</p>
+            </div>
+            <div class="s-2">
+                <p>02</p>
+                <p>Hello</p>
+            </div>
+            <div class="s-3">
+                <p>03</p>
+                <p>Work</p>
+            </div>
+            <div class="s-4">
+                <p>04</p>
+                <p>Licenses</p>
+            </div>
+            <div class="s-5">
+                <p>05</p>
+                <p>Contact</p>
+            </div>
+            <div class="whitespace"></div>
+        </div>
+        <div class="sections">
+            <div class="section-1 sec">
+                <div class="header">
+                    <p>01</p>
+                    <p>Riyansh Jain</p>
+                </div>
+                <div class="copy">
+                    <h1>lorem</h1>
+                </div>
+            </div>
+            <div class="section-2 sec">
+                <div class="header">
+                    <p>02</p>
+                    <p>Hello</p>
+                </div>
+                <div class="copy">
+                    <h1>I'm an undergraduate student pursuing a Bachelor's degree in Computer Engineering, with a particular passion for Cloud Computing.</h1>
+                </div>
+            </div>
+            <div class="section-3 sec">
+                <div class="header">
+                    <p>03</p>
+                    <p>Work</p>
+                </div>
+                <div class="copy">
+                    <h1>lorem</h1>
+                </div>
+            </div>
+            <div class="section-4 sec">
+                <div class="header">
+                    <p>04</p>
+                    <p>Licenses</p>
+                </div>
+                <div class="copy">
+                    <h1>lorem</h1>
+                </div>
+            </div>
+            <div class="section-5 sec">
+                <div class="header">
+                    <p>05</p>
+                    <p>Contact</p>
+                </div>
+                <div class="copy">
+                    <h1>lorem</h1>
+                </div>
+            </div>
+            <div class="whitespace"></div>
+        </div>
+    </div>
+
+    <script>
+        const mapDivs= document.querySelectorAll(".map > div");
+        const sectionDivs = document.querySelectorAll(".sections > .sec");
+        const sectionHeight = [];
+        const accumulatedHeights = [];
+        const RATIO = 0.5;
+
+        let accumulatedHeight = 0;
+        sectionDivs.forEach((section) => {
+            const height = section.clientHeight;
+            sectionHeight.push(height * RATIO);
+            accumulatedHeight += height;
+            accumulatedHeights.push(accumulatedHeight);
+        });
+
+        let lastActiveIndex = -1;
+
+        function updateMapHeights(scrollPos){
+            for(let i=0;i<accumulatedHeights.length;i++){
+                if( i=== 0 && scrollPos < accumulatedHeights[i]){
+                    if(lastActiveIndex !== i) {
+                        if(lastActiveIndex >=0){
+                            mapDivs[lastActiveIndex].style.height = "100px"
+                        }
+                        mapDivs[i].style.height = `${sectionHeight[i]}px`;
+                        lastActiveIndex = i;
+                    }
+                    break;
+                }else if(
+                    i > 0 && scrollPos >= accumulatedHeights[i - 1 ] && scrollPos < accumulatedHeights[i]
+                ){
+                    if(lastActiveIndex !== i){
+                        if(lastActiveIndex >=0){
+                            mapDivs[lastActiveIndex].style.height="100px";
+                        }
+                        mapDivs[i].style.height = `${sectionHeight[i]}px`;
+                        lastActiveIndex = i;
+                    }
+                    break;
+                }
+            }
+        }
+
+        const sectionTotalHeight = [...sectionDivs].reduce(
+            (sum, section) => sum + section.clientHeight, 0
+        );
+
+        const mapTotalHeight = 
+        [...mapDivs].reduce((sum,mapDiv) => sum + mapDiv.clientHeight, 0) + (mapDivs.length - 1) * 75;
+
+        const sectionsScrollableHeight = sectionTotalHeight - window.innerHeight;
+        const mapScrollableHeight = mapTotalHeight - window.innerHeight;
+
+        const scrollRatio = mapScrollableHeight / sectionsScrollableHeight;
+
+        window.addEventListener("scroll" , () => {
+            const scrollPos  = window.scrollY;
+
+            const mapTranslateY = scrollPos * scrollRatio;
+            document.querySelector(".map").style.transform = `translateY(-${mapTranslateY}px)`;
+
+            updateMapHeights(scrollPos);
+        });
+
+        function updateMapHeightsM(scrollPos){
+            const isMobile = window.innerWidth <= 768; // Adjust the breakpoint as needed
+            
+        for(let i = 0; i < accumulatedHeights.length; i++) {
+            if((i === 0 && scrollPos < accumulatedHeights[i]) || 
+            (i > 0 && scrollPos >= accumulatedHeights[i - 1] && scrollPos < accumulatedHeights[i])) {
+                if(lastActiveIndex == i) {
+                    if(lastActiveIndex >= 0) {
+                        mapDivs[lastActiveIndex].style.height = "50px";
+                    }
+                    mapDivs[i].style.height = isMobile ? "100px" : `${sectionHeight[i]}px`;
+                    lastActiveIndex = i;
+                }
+                break;
+            }
+        }
+    }
+
+    window.addEventListener("scroll", () => {
+        const isMobile = window.innerWidth <= 768; // Adjust the breakpoint as needed
+        const scrollPos = window.scrollY;
+        const mapTranslateX = scrollPos * scrollRatio;
+        if (window.innerWidth < 768){document.querySelector(".map").style.transform = `translatex(-${mapTranslateX}px)`;}
+        updateMapHeightsM(scrollPos);
+    });
+
+
+
+        
+    </script>
+  </div>
+  <div class="loading-screen">
+    <div class="loader">
+      <div class="loader-1 bar"></div>
+      <div class="loader-2 bar"></div>
+    </div>
+  </div>
+  <style>
+    .loading-screen{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      color: white;
+      z-index: 3;
+    }
+
+    .loader{
+      position: absolute;
+      top: 50%;
+      left: 45%;
+      width: 50px;
+      height: 300px;
+      transform: translate(-50%,-50%);
+      display: flex;
+      background: rgb(255, 255, 255);
+    }
+
+    .loader-1{
+      position: relative;
+      background: #fff;
+      width: 50px;
+      height: 150px;
+      overflow: hidden;
+    }
+
+    .loader-2{
+      position: relative;
+      background: #fff;
+      height: 300px;
+    }
+  </style>
+
+  <script>
+    gsap.to(".loader-1",{
+      rotate:75,
+      y:-35,
+      delay:1,
+      x:55,
+    },"<");
+
+    gsap.to(".loader",{
+      scale:50,
+      delay:2,
+      duration:1,
+      ease:"power2.inOut",
+    });
+
+    gsap.to(".loader",{
+      rotate:45,
+      y:500,
+      x:0,
+      duration:1,
+      delay:2,
+      ease:"power2.inOut",
+    });
+
+    gsap.to(".loading-screen",{
+      opacity:0,
+      duration:0.5,
+      delay:2.5,
+      ease:"power2.inOut",
+    });
+  </script>
+</body>
+</html>
