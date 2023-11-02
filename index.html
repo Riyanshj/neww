@@ -18,6 +18,7 @@
         html,body{
             width: 100%;
             height: 100%;
+            background: #f4e9e1;
         }
 
         .container{
@@ -107,12 +108,12 @@
 
         .section-4
         {
-            height: 500px;
+            height: 60vh;
         }
 
         .section-5
         {
-            height: 70vw;
+            height: 50vw;
         }
 
         .whitespace{
@@ -130,6 +131,14 @@
         .s-2, .section-2 .header, .section-2 .copy{
             background: #ff003d;
             color: white;
+        }
+
+        .s-4, .section-4 .header, .section-4 .copy{
+            color: rgb(0, 0, 0);
+        }
+
+        .s-4, .section-4 .header{
+          background:white;
         }
 
 
@@ -240,10 +249,10 @@
                       I'm
                     </h1>
                     <h1 class="riyanshjain" style=" font-size: 10vw;display: flex; flex-direction: row;align-items: flex-end; justify-content: center; text-align: right; border-bottom: 0.1vw solid black;">
-                      <span style="font-size: 1.5vw; padding-bottom: 2.5vw; flex: 1; width: 5vw ; flex-direction: row; align-items: flex-start !important ; justify-content: center; text-align: left;">I'm an undergraduate student pursuing a Bachelor's degree in Computer Engineering, with a particular passion for Cloud Computing.</span>
+                      <span style="font-size: 1.75vw; padding-bottom: 2.5vw; flex: 1; width: 5vw ; flex-direction: row; align-items: flex-start !important ; justify-content: center; text-align: left;">I'm an undergraduate student pursuing a Bachelor's degree in Computer Engineering, with a particular passion for Cloud Computing.</span>
                       RIYANSH
                     </h1>
-                    <h1 class="riyanshjain" style=" font-size: 10vw;display: flex; flex-direction: column;align-items: flex-end; justify-content: center; text-align: right;">
+                    <h1 class="riyanshjain" style=" font-size: 10vw;display: flex; flex-direction: column; ">
                       JAIN
                     </h1>
                     <br> 
@@ -265,7 +274,99 @@
                     <p>Licenses</p>
                 </div>
                 <div class="copy">
-                    <h1>lorem</h1>
+                  <div class="scroll-container">
+                    <div class="columns">
+                      <div class="column">
+                        <h1 style="border-bottom:2px black solid;">Experience<span style="border: 1px solid black; border-radius: 25px; font-size: 1.5vw; padding-left: 1vw; padding-right: 1vw;">01</span></h1><br>
+                        <span style="border-bottom:1px black solid;">UI/UX</span><br>
+                        <span style="border-bottom:1px black solid;">App Development</span><br>
+                        <span style="border-bottom:1px black solid;">Web Development</span><br>
+                        <span style="border-bottom:1px black solid;">Web Design</span><br>
+                        <span style="border-bottom:1px black solid;">Front End Development</span><br>
+                        <span style="border-bottom:1px black solid;">Visual Design</span><br>
+                        <span style="border-bottom:1px black solid;">Graphic Designing</span><br>
+                      </h2>
+                    </div>
+                    <div class="column second">
+                      <h1 style="border-bottom:2px black solid;">Licenses<span style="border: 1px solid black; border-radius: 25px; font-size: 1.5vw; padding-left: 1vw; padding-right: 1vw;">02</span></h1><br>
+                      <span style="border-bottom:1px black solid;">Google Cloud</span><br>
+                      <span style="border-bottom:1px black solid;">Oracle</span><br>
+                      <span style="border-bottom:1px black solid;">HackerRank</span><br>
+                      <span style="border-bottom:1px black solid;">Mobile Experience Certified</span><br>
+                      <span style="border-bottom:1px black solid;">EC-Council</span><br>
+                      <span style="border-bottom:1px black solid;">E-learnmarkets</span><br><br><br>
+                    </div>
+                        <div class="column third">
+                      <h1 style="border-bottom:2px black solid;">Technology<span style="border: 1px solid black; border-radius: 25px; font-size: 1.5vw; padding-left: 1vw; padding-right: 1vw;">03</span></h1><br>
+                      <span style="border-bottom:1px black solid;">HTML</span><br>
+                      <span style="border-bottom:1px black solid;">CSS</span><br>
+                      <span style="border-bottom:1px black solid;">JAVASCRIPT</span><br>
+                      <span style="border-bottom:1px black solid;">CLOUD</span><br>
+                      <span style="border-bottom:1px black solid;">FIGMA</span><br>
+                      <span style="border-bottom:1px black solid;">ADOBE</span><br><br><br>
+                    </div>
+                  </div>
+                </div>
+                <style>
+                  .section-4 .copy{
+                    border: none;
+                  }
+
+                  .scroll-container {
+                    overflow-x: auto; /* Enable vertical scrolling */
+                    max-height: 70vh; /* Set a maximum height for vertical scrolling */
+                  }
+                
+                  .columns {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding: 0;
+                  }
+                
+                  .column {
+                    margin: 1vw;
+                    border: 0.1vw solid black;
+                    width: 30vw;
+                    height: 100%;
+                    display: flex;
+                    border-radius: 20px;
+                    flex-direction: column;
+                    padding: 20px;
+                    background: white;
+
+                  }
+                
+                  .span {
+                    text-decoration: underline black 1px;
+                  }
+                  .first{
+                    margin-left: 0;
+                  }
+                  .third{
+                    margin-right: 0;
+                  }
+                
+                  ::-webkit-scrollbar {
+                    display: none;
+                  }
+                  .section-4 .copy{
+                    padding: 0;
+                  }
+                  @media (max-width: 375px) {
+                    .scroll-container {
+                      max-height: 60vh;
+                    }
+                
+                    .columns {
+                      flex-direction: column;
+                    }
+                
+                    .column {
+                      width: 98%;
+                    }
+                  }
+                </style>
                 </div>
             </div>
             <div class="section-5 sec">
@@ -437,7 +538,7 @@
                             const distance = Math.min(boundingBox.width, boundingBox.height) / 5; // Adjust this value as needed
                             const x = distance * Math.cos(angle);
                             const y = distance * Math.sin(angle);
-                            gsap.to(eyeball, { x, y, duration: 0.2 });
+                            gsap.to(eyeball, { x, y, duration: 0.1 });
                           });
                         });
                       </script>
