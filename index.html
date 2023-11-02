@@ -308,64 +308,70 @@
                   </div>
                 </div>
                 <style>
-                  .section-4 .copy{
-                    border: none;
-                  }
+.section-4 .copy {
+  border: none;
+}
 
-                  .scroll-container {
-                    overflow-x: auto; /* Enable vertical scrolling */
-                    max-height: 70vh; /* Set a maximum height for vertical scrolling */
-                  }
-                
-                  .columns {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    padding: 0;
-                  }
-                
-                  .column {
-                    margin: 1vw;
-                    border: 0.1vw solid black;
-                    width: 30vw;
-                    height: 100%;
-                    display: flex;
-                    border-radius: 20px;
-                    flex-direction: column;
-                    padding: 20px;
-                    background: white;
+.scroll-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  max-width: 100%; /* Set a maximum width for horizontal scrolling */
+}
 
-                  }
-                
-                  .span {
-                    text-decoration: underline black 1px;
-                  }
-                  .first{
-                    margin-left: 0;
-                  }
-                  .third{
-                    margin-right: 0;
-                  }
-                
-                  ::-webkit-scrollbar {
-                    display: none;
-                  }
-                  .section-4 .copy{
-                    padding: 0;
-                  }
-                  @media (max-width: 768px) {
-                    .scroll-container {
-                      max-height: 60vh;
-                    }
-                
-                    .columns {
-                      flex-direction: column;
-                    }
-                
-                    .column {
-                      width: 100%;
-                    }
-                  }
+.columns {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap; /* Allow the content to flow horizontally */
+}
+
+.column {
+  margin: 1vw;
+  border: 0.1vw solid black;
+  width: 30vw;
+  min-width: 300px; /* Set a minimum width to prevent content from becoming too narrow */
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  padding: 20px;
+  background: white;
+}
+
+.span {
+  text-decoration: underline black 1px;
+}
+
+.first {
+  margin-left: 0;
+}
+
+.third {
+  margin-right: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.section-4 .copy {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .scroll-container {
+    max-height: 80vh;
+  }
+
+  .columns {
+    flex-direction: row;
+  }
+
+  .column {
+    width: 100%;
+    min-width: 80vw;
+  }
+  .section-4{
+    height: 80vh;
+  }
+}
                 </style>
                 </div>
             </div>
