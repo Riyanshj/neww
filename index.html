@@ -123,8 +123,8 @@
         }
 
         .s-1, .section-1 .header, .section-1 .copy{
-            background: #5900cc;
-            color: white;
+            background: #ffffff;
+            color: rgb(0, 0, 0);
 
         }
 
@@ -141,12 +141,15 @@
           background:white;
         }
 
+        .section-1.copy{
+          height: 50vw;
+          width: 50vw;
+        }
 
 
         
     </style>
     <style>
-        /* Add a media query for screens with a width less than 768px (adjust as needed) */
         @media (max-width: 768px) {
            .copy h1{
             font-size: 20px;
@@ -188,7 +191,7 @@
             padding: 20px 20px 20px 20px;
         }
         .map > div {
-            width: 100px; /* Set the initial height to 100px */
+            width: 100px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -201,6 +204,7 @@
 
         
         }
+
 
 
     </style>
@@ -236,7 +240,46 @@
                     <p>Riyansh Jain</p>
                 </div>
                 <div class="copy">
-                    <h1>lorem</h1>
+                  <div class="centered-content" style="display: flex; justify-content: center; align-items: center;">
+                    <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="50" height="300" fill="black" />
+                      <circle id="myCircle" cx="325" cy="200" r="75" stroke="black" stroke-width="50" fill="none" />
+                      <rect id="rectangle" width="400" height="50" fill="black" transform="translate(-25, 0) rotate(90 50 25)" />
+                    </svg>
+                  </div>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+                  <script>
+                    const circle = document.getElementById('myCircle');
+                    const rect = document.getElementById('rectangle');
+                    const tl = gsap.timeline({ repeat: -1 });
+                  
+                    tl.to(circle, {
+                      duration: 2,
+                      attr: { cx: 125, cy: 100 },
+                      ease: 'bounce.out', 
+                    });
+                
+                    tl.to(rect, {
+                      duration: 2,
+                      rotation: 30,
+                      transformOrigin: 'center', 
+                      ease: 'bounce.out',
+                    });
+                
+                    tl.to(circle, {
+                      duration: 2,
+                      attr: { cx: 325, cy: 200 },
+                      ease: 'bounce.out', 
+                    });
+                
+                    tl.to(rect, {
+                      duration: 2,
+                      rotation: 90,
+                      transformOrigin: 'center', 
+                      ease: 'bounce.out',
+                    });
+                    
+                  </script>
                 </div>
             </div>
             <div class="section-2 sec">
@@ -277,7 +320,7 @@
                   <div class="scroll-container">
                     <div class="columns">
                       <div class="column">
-                        <h1 style="border-bottom:2px black solid;">Experience<span style="border: 1px solid black; border-radius: 25px; font-size: 1.5vw; padding-left: 1vw; padding-right: 1vw;">01</span></h1><br>
+                        <h1 style="border-bottom:2px black solid; font-size: 4vw">Experience</h1><br>
                         <span style="border-bottom:1px black solid;">UI/UX</span><br>
                         <span style="border-bottom:1px black solid;">App Development</span><br>
                         <span style="border-bottom:1px black solid;">Web Development</span><br>
@@ -288,7 +331,7 @@
                       </h2>
                     </div>
                     <div class="column second">
-                      <h1 style="border-bottom:2px black solid;">Licenses<span style="border: 1px solid black; border-radius: 25px; font-size: 1.5vw; padding-left: 1vw; padding-right: 1vw;">02</span></h1><br>
+                      <h1 style="border-bottom:2px black solid; font-size: 4vw">Licenses</h1><br>
                       <span style="border-bottom:1px black solid;">Google Cloud</span><br>
                       <span style="border-bottom:1px black solid;">Oracle</span><br>
                       <span style="border-bottom:1px black solid;">HackerRank</span><br>
@@ -297,7 +340,7 @@
                       <span style="border-bottom:1px black solid;">E-learnmarkets</span><br><br><br>
                     </div>
                         <div class="column third">
-                      <h1 style="border-bottom:2px black solid;">Technology<span style="border: 1px solid black; border-radius: 25px; font-size: 1.5vw; padding-left: 1vw; padding-right: 1vw;">03</span></h1><br>
+                      <h1 style="border-bottom:2px black solid; font-size: 4vw;">Technology</h1><br>
                       <span style="border-bottom:1px black solid;">HTML</span><br>
                       <span style="border-bottom:1px black solid;">CSS</span><br>
                       <span style="border-bottom:1px black solid;">JAVASCRIPT</span><br>
